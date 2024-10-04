@@ -5,6 +5,11 @@ class AndroidBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('M O B I L E'),
+        centerTitle: true,
+      ),
+    );
   }
 }
