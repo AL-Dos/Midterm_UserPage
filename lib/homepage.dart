@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:midterm_userpage/responsive/android.dart';
+import 'package:midterm_userpage/responsive/layout.dart';
+import 'package:midterm_userpage/responsive/web.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -10,7 +13,8 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    final currentWidth = MediaQuery.of(context).size.width;
-    return const Scaffold();
+    return const Scaffold(
+      body: ResponsiveLayout(androidBody: AndroidBody(), webBody: WebBody()),
+    );
   }
 }
