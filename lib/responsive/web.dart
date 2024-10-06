@@ -42,8 +42,8 @@ class WebBody extends StatelessWidget {
                                 "I am a creative webdeveloper",
                                 style: TextStyle(
                                   color: Colors.black87,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w200,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w400,
                                   height: 1,
                                 ),
                                 textAlign: TextAlign.center,
@@ -52,7 +52,7 @@ class WebBody extends StatelessWidget {
                           )
                         ],
                       ),
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 50),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -66,6 +66,58 @@ class WebBody extends StatelessWidget {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.zero,
                                 ),
+                                child: const Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Details",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 30)),
+                                    SizedBox(height: 25),
+                                    Text(
+                                      "Name:",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Text(
+                                      "Aldous Lambert Noel M. Omictin",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Text(
+                                      "Age:",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Text(
+                                      "21 Years",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Text(
+                                      "Location:",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Text(
+                                      "Padre Gomez St. Barangay 32-D Davao City",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ],
+                                ),
                               ),
                               const SizedBox(width: 10),
                               Container(
@@ -74,6 +126,45 @@ class WebBody extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.zero,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text("About me",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 30)),
+                                    const SizedBox(height: 25),
+                                    const Text(
+                                      "Lorem ipsum...",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const SizedBox(height: 25),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "Image by",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.normal,
+                                              fontSize: 20,
+                                              color: Colors.grey[400]),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text(
+                                          "Facebook",
+                                          style: TextStyle(
+                                              decoration:
+                                                  TextDecoration.underline,
+                                              fontWeight: FontWeight.normal,
+                                              fontSize: 20,
+                                              color: Colors.grey[400]),
+                                        )
+                                      ],
+                                    )
+                                  ],
                                 ),
                               ),
                               const SizedBox(width: 10),
@@ -84,21 +175,21 @@ class WebBody extends StatelessWidget {
                                   color: Colors.deepOrange[600],
                                   borderRadius: BorderRadius.zero,
                                 ),
-                                child: Row(
+                                child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Transform.translate(
-                                      offset: const Offset(10, -75),
+                                      offset: const Offset(80, -230),
                                       child: Container(
-                                        width: 190,
-                                        height: 190,
+                                        width: 250,
+                                        height: 250,
                                         decoration: BoxDecoration(
                                             color: Colors.black,
                                             borderRadius:
-                                                BorderRadius.circular(100)),
+                                                BorderRadius.circular(150)),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               )
