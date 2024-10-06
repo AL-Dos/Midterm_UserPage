@@ -60,21 +60,47 @@ class WebBody extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
-                                height: 400,
+                                height: 500,
                                 width: 400,
-                                child: Card(),
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.zero,
+                                ),
                               ),
                               const SizedBox(width: 10),
                               Container(
-                                height: 400,
+                                height: 500,
                                 width: 400,
-                                child: Card(),
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.zero,
+                                ),
                               ),
                               const SizedBox(width: 10),
                               Container(
-                                height: 400,
+                                height: 500,
                                 width: 400,
-                                child: Card(),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepOrange[600],
+                                  borderRadius: BorderRadius.zero,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Transform.translate(
+                                      offset: const Offset(10, -75),
+                                      child: Container(
+                                        width: 190,
+                                        height: 190,
+                                        decoration: BoxDecoration(
+                                            color: Colors.black,
+                                            borderRadius:
+                                                BorderRadius.circular(100)),
+                                      ),
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           )
