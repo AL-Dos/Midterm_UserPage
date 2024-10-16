@@ -9,55 +9,45 @@ class WebBody extends StatelessWidget {
       resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       body: Stack(
-        fit: StackFit.expand,
         children: [
           SingleChildScrollView(
             child: LayoutBuilder(builder: (context, constraints) {
-              return Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+              return Stack(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 30),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "Profile",
-                                style: TextStyle(
-                                  color: Colors.blue.shade200,
-                                  fontSize: 70,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                              const SizedBox(height: 10),
-                              const Text(
-                                "I am a creative webdeveloper",
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 50),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          const SizedBox(height: 80),
+                          Text(
+                            "Profile",
+                            style: TextStyle(
+                              color: Colors.blue.shade200,
+                              fontSize: 70,
+                              fontWeight: FontWeight.bold,
+                              height: 1,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 10),
+                          const Text(
+                            "I am a creative webdeveloper",
+                            style: TextStyle(
+                              color: Colors.black87,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400,
+                              height: 1,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 80),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 height: 500,
@@ -119,7 +109,6 @@ class WebBody extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              const SizedBox(width: 10),
                               Container(
                                 height: 500,
                                 width: 400,
@@ -167,7 +156,6 @@ class WebBody extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              const SizedBox(width: 10),
                               Container(
                                 height: 500,
                                 width: 400,
@@ -175,31 +163,21 @@ class WebBody extends StatelessWidget {
                                   color: Colors.deepOrange[600],
                                   borderRadius: BorderRadius.zero,
                                 ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Transform.translate(
-                                      offset: const Offset(80, -230),
-                                      child: Container(
-                                        width: 250,
-                                        height: 250,
-                                        decoration: BoxDecoration(
-                                            color: Colors.black,
-                                            borderRadius:
-                                                BorderRadius.circular(150)),
-                                      ),
-                                    ),
-                                  ],
+                                child: const Center(
+                                  child: Text(
+                                    'Display',
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.white),
+                                  ),
                                 ),
-                              )
+                              ),
                             ],
-                          )
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
-                ),
+                ],
               );
             }),
           )
