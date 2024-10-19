@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WebBody extends StatelessWidget {
   const WebBody({super.key});
@@ -111,12 +112,21 @@ class WebBody extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  _buildIcons(FontAwesomeIcons.facebook,
-                                      Colors.black, iconSize),
-                                  _buildIcons(FontAwesomeIcons.xTwitter,
-                                      Colors.black, iconSize),
-                                  _buildIcons(FontAwesomeIcons.instagram,
-                                      Colors.black, iconSize),
+                                  _buildIcons(
+                                      FontAwesomeIcons.facebook,
+                                      Colors.black,
+                                      iconSize,
+                                      'https://www.facebook.com/Aldous.Lambert'),
+                                  _buildIcons(
+                                      FontAwesomeIcons.xTwitter,
+                                      Colors.black,
+                                      iconSize,
+                                      'https://x.com/lambertonator_'),
+                                  _buildIcons(
+                                      FontAwesomeIcons.instagram,
+                                      Colors.black,
+                                      iconSize,
+                                      'instagram.com/addu_cateneo/'),
                                 ],
                               ),
                             )
@@ -283,14 +293,26 @@ class WebBody extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  _buildIcons(FontAwesomeIcons.facebook,
-                                      Colors.white, iconSize),
-                                  _buildIcons(FontAwesomeIcons.xTwitter,
-                                      Colors.white, iconSize),
-                                  _buildIcons(FontAwesomeIcons.instagram,
-                                      Colors.white, iconSize),
-                                  _buildIcons(FontAwesomeIcons.linkedin,
-                                      Colors.white, iconSize),
+                                  _buildIcons(
+                                      FontAwesomeIcons.facebook,
+                                      Colors.white,
+                                      iconSize,
+                                      'https://www.facebook.com/Aldous.Lambert'),
+                                  _buildIcons(
+                                      FontAwesomeIcons.xTwitter,
+                                      Colors.white,
+                                      iconSize,
+                                      'https://x.com/lambertonator_'),
+                                  _buildIcons(
+                                      FontAwesomeIcons.instagram,
+                                      Colors.white,
+                                      iconSize,
+                                      'https://instagram.com/addu_cateneo/'),
+                                  _buildIcons(
+                                      FontAwesomeIcons.linkedin,
+                                      Colors.white,
+                                      iconSize,
+                                      'https://www.linkedin.com/in/aldous-lambert-noel-omictin-378b6230b/'),
                                 ],
                               ),
                             )
@@ -310,13 +332,21 @@ class WebBody extends StatelessWidget {
   }
 }
 
-Widget _buildIcons(IconData iconIMG, Color iconColor, double iconSize) {
+void _launchURL(String urlString) async {
+  Uri url = Uri.parse(urlString);
+  if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+    throw Exception("Could not launch $url");
+  }
+}
+
+Widget _buildIcons(
+    IconData iconIMG, Color iconColor, double iconSize, String url) {
   return IconButton(
     icon: FaIcon(
       iconIMG,
       color: iconColor,
       size: iconSize,
     ),
-    onPressed: () {},
+    onPressed: () => _launchURL(url),
   );
 }
