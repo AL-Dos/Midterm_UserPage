@@ -81,7 +81,7 @@ class _AndroidBodyState extends State<AndroidBody> {
                   dotWidth: 12,
                   spacing: 16,
                   dotColor: Colors.grey,
-                  activeDotColor: Colors.blue,
+                  activeDotColor: Colors.deepOrange,
                 ),
               ),
               const SizedBox(height: 50),
