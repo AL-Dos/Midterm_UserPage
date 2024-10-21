@@ -279,7 +279,7 @@ class WebBody extends StatelessWidget {
                             Transform.translate(
                               offset: const Offset(0, -80),
                               child: const Text(
-                                'I am an aspiring backend software \nengineer who can approach projects \nfrom concept to implementation to \ndeploment.',
+                                'I am an aspiring backend software \nengineer that wants to make projects \nfrom concept to implementation to \ndeployment.',
                                 style: TextStyle(
                                     fontSize: 20, color: Colors.white),
                                 textAlign: TextAlign.center,
